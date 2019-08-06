@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
-//
+// Copyright (c) 2018-2019, The Ryko 
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -345,11 +345,11 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/ryko/rykoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-     {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x1A, 0xA1, 0x0A, 0x65, 0xf9, 0x91, 0xb6, 0xA0, 0x1A, 0x43, 0xe9}};
+       {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x1A, 0xA1, 0x0A, 0x65, 0xf9, 0x91, 0xb6, 0xA0, 0x1A, 0x43, 0xe9}};
 
-     const char *const SEED_NODES[] = {
+       const char *const SEED_NODES[] = {
         "165.22.231.202:11897", // Seed1
         "165.22.229.5:11897" // Seed2
-        
+
     };
 } // namespace CryptoNote
