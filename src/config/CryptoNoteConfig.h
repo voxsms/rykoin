@@ -26,7 +26,7 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x5b92;
 
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;
 
@@ -60,8 +60,8 @@ namespace CryptoNote
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
         const char GENESIS_COINBASE_TX_HEX[] =
-            "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151"
-            "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+        "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151"
+        "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
@@ -76,67 +76,67 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE =
             100000; // size of block (bytes) after which reward for block calculated using block size
-        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2 = 20000;
+            const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2 = 20000;
 
-        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 = 10000;
+            const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 = 10000;
 
-        const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
+            const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 
-        const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600;
+            const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600;
 
-        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;
+            const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;
 
-        const uint64_t MINIMUM_FEE = UINT64_C(10);
+            const uint64_t MINIMUM_FEE = UINT64_C(10);
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
-        const uint64_t MINIMUM_MIXIN_V1 = 0;
+            const uint64_t MINIMUM_MIXIN_V1 = 0;
 
-        const uint64_t MAXIMUM_MIXIN_V1 = 100;
+            const uint64_t MAXIMUM_MIXIN_V1 = 100;
 
-        const uint64_t MINIMUM_MIXIN_V2 = 7;
+            const uint64_t MINIMUM_MIXIN_V2 = 7;
 
-        const uint64_t MAXIMUM_MIXIN_V2 = 7;
+            const uint64_t MAXIMUM_MIXIN_V2 = 7;
 
-        const uint64_t MINIMUM_MIXIN_V3 = 3;
+            const uint64_t MINIMUM_MIXIN_V3 = 3;
 
-        const uint64_t MAXIMUM_MIXIN_V3 = 3;
+            const uint64_t MAXIMUM_MIXIN_V3 = 3;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440000;
+            const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440000;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 620000;
+            const uint32_t MIXIN_LIMITS_V2_HEIGHT = 620000;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 800000;
+            const uint32_t MIXIN_LIMITS_V3_HEIGHT = 800000;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-        const uint64_t DEFAULT_MIXIN_V0 = 3;
+            const uint64_t DEFAULT_MIXIN_V0 = 3;
 
-        const uint64_t DEFAULT_MIXIN_V1 = MAXIMUM_MIXIN_V1;
+            const uint64_t DEFAULT_MIXIN_V1 = MAXIMUM_MIXIN_V1;
 
-        const uint64_t DEFAULT_MIXIN_V2 = MAXIMUM_MIXIN_V2;
+            const uint64_t DEFAULT_MIXIN_V2 = MAXIMUM_MIXIN_V2;
 
-        const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V3;
+            const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V3;
 
-        const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(10);
+            const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(10);
 
-        const uint64_t DEFAULT_DUST_THRESHOLD_V2 = UINT64_C(0);
+            const uint64_t DEFAULT_DUST_THRESHOLD_V2 = UINT64_C(0);
 
-        const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
+            const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
 
-        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 800000;
+            const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 800000;
 
-        const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
+            const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
-        const size_t DIFFICULTY_WINDOW = 17;
+            const size_t DIFFICULTY_WINDOW = 17;
 
-        const size_t DIFFICULTY_WINDOW_V1 = 2880;
+            const size_t DIFFICULTY_WINDOW_V1 = 2880;
 
-        const size_t DIFFICULTY_WINDOW_V2 = 2880;
+            const size_t DIFFICULTY_WINDOW_V2 = 2880;
 
-        const uint64_t DIFFICULTY_WINDOW_V3 = 60;
+            const uint64_t DIFFICULTY_WINDOW_V3 = 60;
 
-        const uint64_t DIFFICULTY_BLOCKS_COUNT_V3 = DIFFICULTY_WINDOW_V3 + 1;
+            const uint64_t DIFFICULTY_BLOCKS_COUNT_V3 = DIFFICULTY_WINDOW_V3 + 1;
 
         const size_t DIFFICULTY_CUT = 0; // timestamps to cut after sorting
         const size_t DIFFICULTY_CUT_V1 = 60;
@@ -177,7 +177,7 @@ namespace CryptoNote
         const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS = 1;
 
         const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS =
-            DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
+        DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
 
         const uint64_t CRYPTONOTE_MEMPOOL_TX_LIVETIME = 60 * 60 * 24; // seconds, one day
         const uint64_t CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME = 60 * 60 * 24 * 7; // seconds, one week
@@ -185,15 +185,15 @@ namespace CryptoNote
             7; // CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL * CRYPTONOTE_MEMPOOL_TX_LIVETIME = time to
                // forget tx
 
-        const size_t FUSION_TX_MAX_SIZE = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT * 30 / 100;
+            const size_t FUSION_TX_MAX_SIZE = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT * 30 / 100;
 
-        const size_t FUSION_TX_MIN_INPUT_COUNT = 12;
+            const size_t FUSION_TX_MIN_INPUT_COUNT = 12;
 
-        const size_t FUSION_TX_MIN_IN_OUT_COUNT_RATIO = 4;
+            const size_t FUSION_TX_MIN_IN_OUT_COUNT_RATIO = 4;
 
-        const uint32_t UPGRADE_HEIGHT_V2 = 1;
+            const uint32_t UPGRADE_HEIGHT_V2 = 1;
 
-        const uint32_t UPGRADE_HEIGHT_V3 = 2;
+            const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
         const uint32_t UPGRADE_HEIGHT_V4 = 350000; // Upgrade height for CN-Lite Variant 1 switch.
 
@@ -266,7 +266,7 @@ namespace CryptoNote
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "TurtleCoin";
+    const char CRYPTONOTE_NAME[] = "Ryko";
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
@@ -286,7 +286,7 @@ namespace CryptoNote
     const uint8_t BLOCK_MINOR_VERSION_1 = 1;
 
     const std::unordered_map<uint8_t, std::function<void(const void *data, size_t length, Crypto::Hash &hash)>>
-        HASHING_ALGORITHMS_BY_BLOCK_VERSION = {
+    HASHING_ALGORITHMS_BY_BLOCK_VERSION = {
             {BLOCK_MAJOR_VERSION_1, Crypto::cn_slow_hash_v0}, /* From zero */
             {BLOCK_MAJOR_VERSION_2, Crypto::cn_slow_hash_v0}, /* UPGRADE_HEIGHT_V2 */
             {BLOCK_MAJOR_VERSION_3, Crypto::cn_slow_hash_v0}, /* UPGRADE_HEIGHT_V3 */
@@ -349,7 +349,7 @@ namespace CryptoNote
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9}};
 
-    const char *const SEED_NODES[] = {
+        const char *const SEED_NODES[] = {
         "206.189.142.142:11897", // rock
         "145.239.88.119:11999", // cision
         "142.44.242.106:11897", // tom
