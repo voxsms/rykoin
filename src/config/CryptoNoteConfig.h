@@ -28,7 +28,7 @@ namespace CryptoNote
 
         const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x5b92;
 
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 20;
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
 
@@ -345,9 +345,9 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/ryko/rykoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-       {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x1A, 0xA1, 0x0A, 0x65, 0xf9, 0x91, 0xb6, 0xA0, 0x1A, 0x43, 0xe9}};
+     {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x1A, 0xA1, 0x0A, 0x65, 0xf9, 0x91, 0xb6, 0xA0, 0x1A, 0x43, 0xe9}};
 
-       const char *const SEED_NODES[] = {
+     const char *const SEED_NODES[] = {
         "165.22.231.202:11897", // Seed1
         "165.22.229.5:11897" // Seed2
 
